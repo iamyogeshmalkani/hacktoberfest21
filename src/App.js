@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navbar from './components/navbar';
+import Home from './components/home';
+import Transactions from './components/transactions';
+import ViewCustomer from './components/viewcustomer';
+import { BrowserRouter as Router, Switch,Route } from 'react-router-dom';
+import Footer from './components/footer';
+import Customerdetails from './components/Customerdetails';
+import SendMoney from './components/sendmoney';
+
 
 function App() {
+const srno=8;
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+  <div className="App">
+     <Navbar />
+     <Switch>
+       <Route path="/" exact component={Home} />
+       <Route path="/customers" exact component={ViewCustomer} />
+      <Route path="/transactions" component={Transactions}/>
+      <Route path="/customers/:id" exact component={Customerdetails} />
+      <Route path="/customers/:id/send" component={SendMoney} />
+     </Switch>
+     <Footer />
+
     </div>
+    </Router>
+   
   );
+ 
 }
 
 export default App;

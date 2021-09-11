@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  
+  
 }
 
 .App-logo {
@@ -27,6 +29,20 @@
 .App-link {
   color: #61dafb;
 }
+.customercard{
+  width: 18rem;
+  margin: 10px auto 10px auto;
+}
+
+/* .footer{
+  margin-top: auto;
+ 
+  
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+} */
 
 @keyframes App-logo-spin {
   from {
